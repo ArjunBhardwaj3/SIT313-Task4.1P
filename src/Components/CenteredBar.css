@@ -1,0 +1,193 @@
+.NavbarItems {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
+  width: 95%;
+  height: 80px;
+  border-radius: 13px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 9999;
+}
+
+.CenterContent p{
+  margin-left: 20px;
+  margin-right: 35px;
+  display: inline-block;
+}
+
+.CenterContent {
+  flex-grow: 1;
+}
+
+.SearchInput {
+  padding: 8px;
+  font-size: 14px;
+  width: 80%;
+  border: 1px solid #ccc;
+ 
+}
+
+
+.navbar-logo {
+  color: #222;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-gap: 10px;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links {
+  text-decoration: none;
+  color: #222;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.7rem 1rem;
+  white-space: nowrap;
+}
+
+nav-links i {
+  padding-right: 10px;
+}
+
+.nav-links:hover {
+  background-color: #01959a;
+  color: #fff;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-links-mobile {
+  display: none;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #151516;
+  color: #fff;
+}
+
+.menu-icons {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  .NavbarItems {
+    z-index: 99;
+  }
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: white;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    opacity: 0;
+    align-items: stretch;
+    padding: 88px 0 30px 0;
+    margin: 0;
+    transition: 0.3s ease-in-out;
+    border-radius: 13px;
+  }
+
+  .nav-menu.active {
+    left: 0;
+    opacity: 1;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+  }
+
+  .nam-links {
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 2rem 0;
+  }
+
+  .nav-links:hover {
+    background: #01959a;
+    transition: none;
+  }
+
+  button {
+    display: none;
+  }
+
+  .nav-links-mobile {
+    display: block;
+    text-align: center;
+    padding: 1.5rem;
+    margin: auto;
+    border-radius: 4px;
+    width: 80%;
+    background: #01959a;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  .menu-icons {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu-icons {
+    font-size: 1.2rem;
+    color: #222;
+  }
+}
+
+/* Add this CSS to your existing CSS file or create a new one */
+
+/* Style for the search bar */
+.nav-search input[type="text"] {
+  border: none;
+  background-color: #f5f5f5; /* Background color for the input box */
+  padding: 8px 12px; /* Adjust padding as needed */
+  border-radius: 20px; /* Rounded corners for the input box */
+  font-size: 16px; /* Font size for the text inside the input box */
+  width: 200px; /* Set the width of the input box */
+  outline: none; /* Remove the outline when focused */
+}
+
+/* Style for the search icon */
+.nav-search i {
+  margin-right: 10px; /* Add spacing between the icon and input box */
+  color: #777; /* Color for the search icon */
+  font-size: 18px; /* Font size for the search icon */
+}
+
+/* Style for the entire search bar container */
+.nav-search {
+  display: flex;
+  align-items: center;
+  background-color: #fff; /* Background color for the search bar container */
+  border-radius: 20px; /* Rounded corners for the search bar container */
+  padding: 5px 40px; /* Adjust padding as needed */
+  
+}
